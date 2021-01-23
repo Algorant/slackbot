@@ -1,6 +1,5 @@
 import requests
 import json
-from time import sleep
 
 
 def getBitcoinPrice():
@@ -12,7 +11,5 @@ def getBitcoinPrice():
     except requests.ConnectionError:
         print("Error querying Bitstamp API")
 
-
-while True:
-    print("Bitstamp last price: $" + str(getBitcoinPrice()) + "/BTC")
-    sleep(5)
+# current_price = getBitcoinPrice()
+# print(f"The current BTC price is ${current_price}")
